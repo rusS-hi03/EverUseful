@@ -97,12 +97,12 @@ export const Footer = () => {
               Learning Hub
             </h4>
             <ul className="space-y-2.5 text-xs">
-              <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><BookMarked className="mr-2 h-4 w-4 text-gray-500" /> Interactive Courses</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Lightbulb className="mr-2 h-4 w-4 text-gray-500" /> Skill Labs</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><HelpCircle className="mr-2 h-4 w-4 text-gray-500" /> Q&A Forums</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Calendar className="mr-2 h-4 w-4 text-gray-500" /> Live Workshops</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Users className="mr-2 h-4 w-4 text-gray-500" /> Study Groups</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors flex items-center"><Award className="mr-2 h-4 w-4 text-gray-500" /> Certifications</a></li>
+              <li><Link to="/marketplace" className="hover:text-blue-400 transition-colors flex items-center"><BookMarked className="mr-2 h-4 w-4 text-gray-500" /> Course Marketplace</Link></li>
+              <li><Link to="/aiagents" className="hover:text-blue-400 transition-colors flex items-center"><Lightbulb className="mr-2 h-4 w-4 text-gray-500" /> AI Learning Agents</Link></li>
+              <li><Link to="/findexpert" className="hover:text-blue-400 transition-colors flex items-center"><HelpCircle className="mr-2 h-4 w-4 text-gray-500" /> Find Expert Mentors</Link></li>
+              <li><Link to="/meetings/schedule" className="hover:text-blue-400 transition-colors flex items-center"><Calendar className="mr-2 h-4 w-4 text-gray-500" /> Schedule Sessions</Link></li>
+              <li><Link to="/collaborators" className="hover:text-blue-400 transition-colors flex items-center"><Users className="mr-2 h-4 w-4 text-gray-500" /> Study Groups</Link></li>
+              <li><Link to="/dashboard" className="hover:text-blue-400 transition-colors flex items-center"><Award className="mr-2 h-4 w-4 text-gray-500" /> Progress Dashboard</Link></li>
             </ul>
           </div>
 
@@ -110,15 +110,15 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-white font-medium flex items-center text-sm">
               <Briefcase className="mr-2 h-5 w-5 text-purple-400" />
-              Enterprise
+              Work & Connect
             </h4>
             <ul className="space-y-2.5 text-xs">
-              <li><a href="#" className="hover:text-purple-400 transition-colors flex items-center"><Users className="mr-2 h-4 w-4 text-gray-500" /> Team Training</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors flex items-center"><BookOpen className="mr-2 h-4 w-4 text-gray-500" /> Custom Content</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors flex items-center"><GraduationCap className="mr-2 h-4 w-4 text-gray-500" /> Academic Partnerships</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors flex items-center"><Award className="mr-2 h-4 w-4 text-gray-500" /> Certification Programs</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors flex items-center"><Globe className="mr-2 h-4 w-4 text-gray-500" /> Global Campus</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors flex items-center"><MessageSquare className="mr-2 h-4 w-4 text-gray-500" /> API Integration</a></li>
+              <li><Link to="/consultation" className="hover:text-purple-400 transition-colors flex items-center"><Users className="mr-2 h-4 w-4 text-gray-500" /> Expert Consultation</Link></li>
+              <li><Link to="/freelancing" className="hover:text-purple-400 transition-colors flex items-center"><BookOpen className="mr-2 h-4 w-4 text-gray-500" /> Research Freelancing</Link></li>
+              <li><Link to="/connect" className="hover:text-purple-400 transition-colors flex items-center"><GraduationCap className="mr-2 h-4 w-4 text-gray-500" /> Career Opportunities</Link></li>
+              <li><Link to="/projects/new" className="hover:text-purple-400 transition-colors flex items-center"><Award className="mr-2 h-4 w-4 text-gray-500" /> Start New Project</Link></li>
+              <li><Link to="/connection" className="hover:text-purple-400 transition-colors flex items-center"><Globe className="mr-2 h-4 w-4 text-gray-500" /> Network & Connect</Link></li>
+              <li><Link to="/sustainable" className="hover:text-purple-400 transition-colors flex items-center"><MessageSquare className="mr-2 h-4 w-4 text-gray-500" /> Sustainable Projects</Link></li>
             </ul>
           </div>
 
