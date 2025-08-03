@@ -2,6 +2,7 @@
 import { ChevronRight, ChevronLeft, Eye, Users, Target, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -83,6 +84,7 @@ export const ProjectsSection = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const navigate = useNavigate();
 
   const toggleWatchlist = (projectId: number) => {
     setWatchlist(prev => 
@@ -90,6 +92,14 @@ export const ProjectsSection = () => {
         ? prev.filter(id => id !== projectId)
         : [...prev, projectId]
     );
+  };
+
+  const handleBrowseAllProjects = () => {
+    navigate('/marketplace');
+  };
+
+  const handleSubmitProposal = () => {
+    navigate('/projects/new');
   };
 
   const scroll = (direction: 'left' | 'right') => {
@@ -230,6 +240,7 @@ export const ProjectsSection = () => {
                       <Button 
                         size="sm" 
                         className="bg-blue-600 hover:bg-blue-700 text-white text-[10px] sm:text-xs h-6 sm:h-8 px-2 sm:px-3"
+                        onClick={handleBrowseAllProjects}
                       >
                         <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                       </Button>
@@ -254,10 +265,17 @@ export const ProjectsSection = () => {
           <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Ready to Join a Research Team?</h3>
           <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Connect with professors and students worldwide working on sustainable solutions</p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base">
+            <Button 
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base"
+              onClick={handleBrowseAllProjects}
+            >
               Browse All Projects
             </Button>
-            <Button variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base">
+            <Button 
+              variant="outline" 
+              className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base"
+              onClick={handleSubmitProposal}
+            >
               Submit Your Proposal
             </Button>
           </div>
