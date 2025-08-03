@@ -1,5 +1,5 @@
 
-import { ChevronRight, ChevronLeft, Eye, Users, Target, ArrowRight, Bookmark } from "lucide-react";
+import { ChevronRight, ChevronLeft, Eye, Users, Target, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
 
@@ -190,7 +190,7 @@ export const ProjectsSection = () => {
                       </span>
                     </div>
 
-                    {/* Gradient Overlay on Hover */}
+                    {/* Subtle Gradient Overlay on Hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   
