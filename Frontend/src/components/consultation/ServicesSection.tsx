@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Leaf, Zap, Building, Users, BarChart3, Settings } from "lucide-react";
+import { Leaf, Zap, Building, Users, BarChart3, Settings, DollarSign } from "lucide-react";
 
 const services = [
   {
@@ -43,6 +43,13 @@ const services = [
     description: "End-to-end project management from planning to installation and ongoing maintenance support.",
     color: "eco-blue",
     details: "• Project coordination\n• Vendor management\n• Ongoing maintenance"
+  },
+  {
+    icon: DollarSign,
+    title: "Green Finance & Grants",
+    description: "Expert guidance on securing funding, grants, and financing options for sustainable energy projects.",
+    color: "eco-purple",
+    details: "• Grant application assistance\n• Financial planning\n• Tax incentive optimization\n• Investment strategies"
   }
 ];
 
