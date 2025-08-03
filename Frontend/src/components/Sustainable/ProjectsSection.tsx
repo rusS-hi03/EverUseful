@@ -232,7 +232,10 @@ export const ProjectsSection = () => {
                       <Button 
                         size="sm" 
                         className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] sm:text-xs h-6 sm:h-8"
-                        onClick={() => toggleWatchlist(project.id)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleWatchlist(project.id);
+                        }}
                       >
                         <Eye className="w-2.5 h-2.5 sm:w-3 sm:h-3 mr-1" />
                         {watchlist.includes(project.id) ? "Watching" : "Watch"}
@@ -240,7 +243,10 @@ export const ProjectsSection = () => {
                       <Button 
                         size="sm" 
                         className="bg-blue-600 hover:bg-blue-700 text-white text-[10px] sm:text-xs h-6 sm:h-8 px-2 sm:px-3"
-                        onClick={handleBrowseAllProjects}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleBrowseAllProjects();
+                        }}
                       >
                         <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                       </Button>
