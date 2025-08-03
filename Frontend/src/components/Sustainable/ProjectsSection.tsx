@@ -1,5 +1,5 @@
 
-import { ChevronRight, ChevronLeft, Eye, Users, Target, ArrowRight } from "lucide-react";
+import { ChevronRight, ChevronLeft, ExternalLink, Users, Target, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +15,8 @@ const projects = [
     communities: "Rural & Urban",
     status: "Active Research",
     teamSize: "12 researchers",
-    fundingGoal: "$2.5M secured"
+    fundingGoal: "$2.5M secured",
+    articleUrl: "https://www.un.org/sustainabledevelopment/water-and-sanitation/"
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ const projects = [
     communities: "Remote & Developing",
     status: "Seeking Partners",
     teamSize: "8 engineers",
-    fundingGoal: "$1.8M target"
+    fundingGoal: "$1.8M target",
+    articleUrl: "https://www.irena.org/Energy-Transition/Technology/Renewable-energy-technologies"
   },
   {
     id: 3,
@@ -39,7 +41,8 @@ const projects = [
     communities: "Agricultural & Coastal",
     status: "Pilot Testing",
     teamSize: "15 field experts",
-    fundingGoal: "$3.2M funded"
+    fundingGoal: "$3.2M funded",
+    articleUrl: "https://www.fao.org/digital-agriculture/en/"
   },
   {
     id: 4,
@@ -51,7 +54,8 @@ const projects = [
     communities: "Urban & Industrial",
     status: "Implementation",
     teamSize: "6 policy experts",
-    fundingGoal: "$4.1M raised"
+    fundingGoal: "$4.1M raised",
+    articleUrl: "https://www.ellenmacarthurfoundation.org/topics/circular-economy-introduction/overview"
   },
   {
     id: 5,
@@ -63,7 +67,8 @@ const projects = [
     communities: "Industrial & Research",
     status: "R&D Phase",
     teamSize: "20 scientists",
-    fundingGoal: "$5.5M needed"
+    fundingGoal: "$5.5M needed",
+    articleUrl: "https://www.iea.org/reports/ccus-in-clean-energy-transitions"
   },
   {
     id: 6,
@@ -75,7 +80,8 @@ const projects = [
     communities: "Forest & Marine",
     status: "Global Expansion",
     teamSize: "10 biologists",
-    fundingGoal: "$2.8M secured"
+    fundingGoal: "$2.8M secured",
+    articleUrl: "https://www.cbd.int/convention/"
   }
 ];
 
@@ -92,6 +98,10 @@ export const ProjectsSection = () => {
         ? prev.filter(id => id !== projectId)
         : [...prev, projectId]
     );
+  };
+
+  const handleReadArticle = (articleUrl: string) => {
+    window.open(articleUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleBrowseAllProjects = () => {
@@ -234,11 +244,11 @@ export const ProjectsSection = () => {
                         className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] sm:text-xs h-6 sm:h-8"
                         onClick={(e) => {
                           e.stopPropagation();
-                          toggleWatchlist(project.id);
+                          handleReadArticle(project.articleUrl);
                         }}
                       >
-                        <Eye className="w-2.5 h-2.5 sm:w-3 sm:h-3 mr-1" />
-                        {watchlist.includes(project.id) ? "Watching" : "Watch"}
+                        <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 mr-1" />
+                        Read More
                       </Button>
                       <Button 
                         size="sm" 
